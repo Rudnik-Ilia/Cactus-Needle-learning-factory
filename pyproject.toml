@@ -1,0 +1,25 @@
+[project]
+name = "cactus-needle"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.139.2",
+    "httpx>=0.28.1",
+    "needle @ git+https://github.com/cactus-compute/needle.git",
+    "prompt-toolkit>=3.0.52",
+    "pydantic-settings>=2.14.2",
+    "uvicorn>=0.51.0",
+]
+
+[project.scripts]
+cli = "model.cli.cli:run"
+api = "model.api_server.main:run"
+
+[tool.setuptools.packages.find]
+include = ["model*"]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
