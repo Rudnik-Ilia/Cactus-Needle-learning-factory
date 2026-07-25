@@ -1,17 +1,9 @@
-import json
-from pathlib import Path
 
 import needle
 from prompt_toolkit import prompt
 
-from ..settings import SETTINGS
-
-
-def load_tools(path: str | Path) -> str:
-    with Path(path).open("r", encoding="utf-8") as file:
-        data = json.load(file)
-
-    return json.dumps(data)
+from src.core.general_functions import load_tools
+from src.core.settings import SETTINGS
 
 
 def main(query: str) -> None:
