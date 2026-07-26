@@ -21,7 +21,7 @@ cli = "model.cli.cli:run"
 api = "model.api_server.main:run"
 
 [tool.setuptools.packages.find]
-include = ["model*", "src*", "agent*"]
+include = ["model*", "src*", "agents*"]
 
 [build-system]
 requires = ["setuptools>=68.0"]
